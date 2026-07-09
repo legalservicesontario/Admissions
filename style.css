@@ -1,123 +1,717 @@
-body {
-margin: 0;
-font-family: 'Segoe UI', sans-serif;
-background: #111;
-color: #ddd;
+/* =========================================================
+   EXECUTIVE ADMISSIONS PORTFOLIO
+   Livie Grimaldi
+   Health Systems Management
+   Fanshawe College
+========================================================= */
+
+
+* {
+    box-sizing: border-box;
 }
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+    "Segoe UI",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+    background:
+    #101010;
+
+    color:
+    #e5e5e5;
+
+    line-height:
+    1.7;
+
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
 
 .hero-section {
-background: linear-gradient(135deg, #3a006b, #c49b3d);
-text-align: center;
-color: white;
-padding: 100px 20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #240044,
+        #6c3d00,
+        #c49b3d
+    );
+
+    color:
+    white;
+
+    padding:
+    90px 20px;
+
 }
+
+
+.hero-content {
+
+    max-width:
+    1200px;
+
+    margin:
+    auto;
+
+    display:
+    flex;
+
+    align-items:
+    center;
+
+    justify-content:
+    center;
+
+    gap:
+    50px;
+
+}
+
+
+.profile-image img {
+
+    width:
+    220px;
+
+    height:
+    220px;
+
+    object-fit:
+    cover;
+
+    border-radius:
+    50%;
+
+    border:
+    5px solid #c49b3d;
+
+    box-shadow:
+    0 0 30px rgba(0,0,0,.5);
+
+}
+
+
+.hero-text {
+
+    max-width:
+    700px;
+
+}
+
+
+.hero-text h1 {
+
+    font-size:
+    3rem;
+
+    margin:
+    0;
+
+    letter-spacing:
+    2px;
+
+}
+
+
+.hero-text h2 {
+
+    color:
+    white;
+
+    border:
+    none;
+
+    font-size:
+    1.5rem;
+
+}
+
+
+.tagline {
+
+    color:
+    #f4d77b;
+
+    font-weight:
+    bold;
+
+    font-size:
+    1.15rem;
+
+}
+
+
+
+/* =========================
+   BUTTONS
+========================= */
+
 
 .cta-btn {
-background: #c49b3d;
-color: #111;
-padding: 12px 25px;
-text-decoration: none;
-border-radius: 8px;
-font-weight: bold;
-margin-top: 20px;
-display: inline-block;
-transition: 0.3s;
+
+    background:
+    #c49b3d;
+
+    color:
+    #111;
+
+    padding:
+    12px 25px;
+
+    text-decoration:
+    none;
+
+    border-radius:
+    30px;
+
+    font-weight:
+    bold;
+
+    margin:
+    10px;
+
+    display:
+    inline-block;
+
+    transition:
+    .3s;
+
 }
+
 
 .cta-btn:hover {
-background: #e5c565;
+
+    background:
+    #f0d276;
+
+    transform:
+    translateY(-3px);
+
 }
 
-.resume-section, .lawsuit-section {
-padding: 60px 10%;
-background: #1b1b1b;
-border-top: 3px solid #c49b3d;
+
+
+/* =========================
+   STATS
+========================= */
+
+
+.stats-section {
+
+    max-width:
+    1200px;
+
+    margin:
+    -40px auto 40px;
+
+    display:
+    grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:
+    20px;
+
+    padding:
+    0 20px;
+
 }
+
+
+.stat-card {
+
+
+    background:
+    #1d1d1d;
+
+    border:
+    1px solid #333;
+
+    border-top:
+    4px solid #c49b3d;
+
+    padding:
+    25px;
+
+    text-align:
+    center;
+
+    border-radius:
+    12px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.3);
+
+}
+
+
+.stat-card h2 {
+
+    color:
+    #c49b3d;
+
+    font-size:
+    2rem;
+
+    border:
+    none;
+
+    margin:
+    0;
+
+}
+
+
+.stat-card p {
+
+    margin:
+    0;
+
+}
+
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+
+.resume-section {
+
+    padding:
+    60px 10%;
+
+    background:
+    #181818;
+
+    border-top:
+    2px solid #c49b3d;
+
+}
+
+
+.resume-section:nth-child(even){
+
+    background:
+    #202020;
+
+}
+
+
 
 h2 {
-color: #c49b3d;
-text-transform: uppercase;
-border-bottom: 1px solid #333;
-padding-bottom: 8px;
+
+    color:
+    #c49b3d;
+
+    text-transform:
+    uppercase;
+
+    letter-spacing:
+    1px;
+
+    border-bottom:
+    1px solid #444;
+
+    padding-bottom:
+    10px;
+
 }
+
+
+h3 {
+
+    color:
+    #f0d276;
+
+}
+
+
+
+p {
+
+    font-size:
+    1.05rem;
+
+}
+
+
+
+/* =========================
+   PORTFOLIO CARDS
+========================= */
+
+
+.portfolio-grid {
+
+    display:
+    grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:
+    25px;
+
+}
+
+
+
+.portfolio-card {
+
+
+    background:
+    linear-gradient(
+        145deg,
+        #222,
+        #151515
+    );
+
+    padding:
+    25px;
+
+    border-radius:
+    12px;
+
+    border:
+    1px solid #333;
+
+    transition:
+    .3s;
+
+
+}
+
+
+.portfolio-card:hover {
+
+    transform:
+    translateY(-8px);
+
+    border-color:
+    #c49b3d;
+
+}
+
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+
+.timeline {
+
+    padding:
+    0;
+
+}
+
 
 .timeline li {
-list-style: none;
-margin: 10px 0;
-opacity: 0;
-transform: translateY(30px);
-transition: 0.6s ease;
+
+
+    list-style:
+    none;
+
+    background:
+    #202020;
+
+    padding:
+    30px;
+
+    margin-bottom:
+    25px;
+
+    border-left:
+    5px solid #c49b3d;
+
+    border-radius:
+    8px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.25);
+
+
 }
 
-.timeline li.visible {
-opacity: 1;
-transform: translateY(0);
+
+.timeline ul li {
+
+    background:
+    transparent;
+
+    box-shadow:
+    none;
+
+    border:
+    none;
+
+    padding:
+    5px;
+
+    margin:
+    0;
+
 }
+
+
+
+/* =========================
+   RECOMMENDATIONS
+========================= */
+
+
+.recommendation-grid {
+
+
+    display:
+    grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:
+    25px;
+
+
+}
+
+
+
+.recommendation-card {
+
+
+    background:
+    #202020;
+
+    padding:
+    25px;
+
+    border-radius:
+    12px;
+
+    border:
+    1px solid #333;
+
+}
+
+
+
+/* =========================
+   ACCORDIONS
+========================= */
+
 
 .accordion-item {
-margin-bottom: 20px;
-border: 1px solid #333;
-border-radius: 6px;
-overflow: hidden;
+
+
+    margin-bottom:
+    20px;
+
+    border:
+    1px solid #333;
+
+    border-radius:
+    8px;
+
+    overflow:
+    hidden;
+
+
 }
+
 
 .accordion-header {
-width: 100%;
-background: #292929;
-color: #c49b3d;
-text-align: left;
-padding: 15px;
-border: none;
-outline: none;
-cursor: pointer;
-font-size: 1.1rem;
+
+
+    width:
+    100%;
+
+    background:
+    #292929;
+
+    color:
+    #c49b3d;
+
+    padding:
+    18px;
+
+    border:
+    none;
+
+    cursor:
+    pointer;
+
+    font-size:
+    1.1rem;
+
+    text-align:
+    left;
+
+
 }
+
+
 
 .accordion-body {
-display: none;
-padding: 20px;
-background: #222;
+
+
+    display:
+    none;
+
+    padding:
+    20px;
+
+    background:
+    #222;
+
+
 }
+
 
 .accordion-item.active .accordion-body {
-display: block;
+
+    display:
+    block;
+
 }
 
-details {
-margin: 10px 0;
-background: #1e1e1e;
-padding: 10px 15px;
-border-radius: 6px;
-}
 
-summary {
-color: #c49b3d;
-cursor: pointer;
-font-weight: bold;
-}
 
-.telegram-float {
-position: fixed;
-bottom: 20px;
-right: 20px;
-background: #0088cc;
-color: #fff;
-padding: 15px 20px;
-border-radius: 50px;
-text-decoration: none;
-font-weight: bold;
-box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-transition: 0.3s;
-}
+/* =========================
+   FOOTER
+========================= */
 
-.telegram-float:hover {
-background: #00a3ff;
-}
 
 footer {
-background: #0d0d0d;
-text-align: center;
-padding: 20px;
-color: #999;
-font-size: 0.9rem;
+
+
+    background:
+    #080808;
+
+    text-align:
+    center;
+
+    padding:
+    30px;
+
+    color:
+    #aaa;
+
+
+}
+
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+
+@media(max-width:900px){
+
+
+.hero-content {
+
+    flex-direction:
+    column;
+
+    text-align:
+    center;
+
+}
+
+
+.stats-section {
+
+
+grid-template-columns:
+repeat(2,1fr);
+
+
+}
+
+
+.portfolio-grid {
+
+
+grid-template-columns:
+repeat(2,1fr);
+
+
+}
+
+
+.recommendation-grid {
+
+
+grid-template-columns:
+1fr;
+
+
+}
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.hero-text h1 {
+
+font-size:
+2.2rem;
+
+}
+
+
+.stats-section {
+
+
+grid-template-columns:
+1fr;
+
+
+}
+
+
+.portfolio-grid {
+
+
+grid-template-columns:
+1fr;
+
+
+}
+
+
+.resume-section {
+
+padding:
+40px 5%;
+
+}
+
+
 }
