@@ -3,22 +3,93 @@
    Livie Grimaldi
    Health Systems Management
    Fanshawe College
+
+   Premium Executive Portfolio Theme
+========================================================= */
+
+
+/* =========================================================
+   DESIGN SYSTEM VARIABLES
+========================================================= */
+
+:root {
+
+    --bg:
+    #101010;
+
+    --surface:
+    #181818;
+
+    --surface-alt:
+    #202020;
+
+    --card:
+    #1f1f1f;
+
+    --gold:
+    #c49b3d;
+
+    --gold-light:
+    #f0d276;
+
+    --gold-soft:
+    #f4d77b;
+
+    --text:
+    #e5e5e5;
+
+    --text-muted:
+    #bdbdbd;
+
+    --border:
+    #333;
+
+    --white:
+    #ffffff;
+
+    --shadow:
+    0 12px 30px rgba(0,0,0,.35);
+
+    --shadow-hover:
+    0 20px 45px rgba(0,0,0,.45);
+
+    --radius:
+    12px;
+
+    --transition:
+    .35s ease;
+
+}
+
+
+
+/* =========================================================
+   RESET + GLOBAL
 ========================================================= */
 
 
 * {
-    box-sizing: border-box;
+
+    box-sizing:
+    border-box;
+
 }
+
 
 
 html {
-    scroll-behavior: smooth;
+
+    scroll-behavior:
+    smooth;
+
 }
+
 
 
 body {
 
-    margin: 0;
+    margin:
+    0;
 
     font-family:
     "Segoe UI",
@@ -27,39 +98,161 @@ body {
     sans-serif;
 
     background:
-    #101010;
+    var(--bg);
 
     color:
-    #e5e5e5;
+    var(--text);
+
+    font-size:
+    18px;
 
     line-height:
-    1.7;
+    1.8;
+
+    letter-spacing:
+    .2px;
 
 }
 
 
-/* =========================
+
+p {
+
+    font-size:
+    1.05rem;
+
+    margin-bottom:
+    24px;
+
+}
+
+
+
+a {
+
+    transition:
+    var(--transition);
+
+}
+
+
+
+ul {
+
+    line-height:
+    1.9;
+
+}
+
+
+
+/* =========================================================
+   ANIMATION SYSTEM
+========================================================= */
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity:
+        0;
+
+        transform:
+        translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:
+        1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes pulseGold {
+
+    0% {
+
+        box-shadow:
+        0 0 0 rgba(196,155,61,0);
+
+    }
+
+
+    50% {
+
+        box-shadow:
+        0 0 30px rgba(196,155,61,.35);
+
+    }
+
+
+    100% {
+
+        box-shadow:
+        0 0 0 rgba(196,155,61,0);
+
+    }
+
+}
+
+
+
+.resume-section {
+
+    animation:
+    fadeUp .8s ease;
+
+}
+
+
+
+/* =========================================================
    HERO SECTION
-========================= */
+========================================================= */
 
 
 .hero-section {
 
     background:
+
+    radial-gradient(
+        circle at top left,
+        rgba(196,155,61,.25),
+        transparent 40%
+    ),
+
+    radial-gradient(
+        circle at bottom right,
+        rgba(108,61,0,.35),
+        transparent 45%
+    ),
+
     linear-gradient(
         135deg,
-        #240044,
-        #6c3d00,
-        #c49b3d
+        #111,
+        #181818,
+        #242424
     );
 
+
     color:
-    white;
+    var(--white);
 
     padding:
-    90px 20px;
+    100px 20px;
 
 }
+
 
 
 .hero-content {
@@ -80,238 +273,403 @@ body {
     center;
 
     gap:
-    50px;
+    60px;
 
 }
+
 
 
 .profile-image img {
 
+
     width:
-    220px;
+    240px;
+
 
     height:
-    220px;
+    240px;
+
 
     object-fit:
     cover;
 
+
     border-radius:
     50%;
 
+
     border:
-    5px solid #c49b3d;
+    5px solid var(--gold);
+
 
     box-shadow:
-    0 0 30px rgba(0,0,0,.5);
+    0 0 40px rgba(196,155,61,.35);
+
+
+    animation:
+    pulseGold 4s infinite;
 
 }
+
 
 
 .hero-text {
 
     max-width:
-    700px;
+    750px;
 
 }
+
 
 
 .hero-text h1 {
 
+
     font-size:
-    3rem;
+    3.2rem;
+
 
     margin:
     0;
 
+
     letter-spacing:
-    2px;
+    3px;
+
+
+    font-weight:
+    700;
 
 }
+
 
 
 .hero-text h2 {
 
+
     color:
-    white;
+    var(--white);
+
 
     border:
     none;
 
+
     font-size:
-    1.5rem;
+    1.6rem;
 
 }
+
 
 
 .tagline {
 
+
     color:
-    #f4d77b;
+    var(--gold-soft);
+
 
     font-weight:
     bold;
 
+
     font-size:
-    1.15rem;
+    1.2rem;
 
 }
 
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* =========================================================
+   BUTTON SYSTEM
+========================================================= */
 
 
 .cta-btn {
 
+
     background:
-    #c49b3d;
+
+    linear-gradient(
+        135deg,
+        var(--gold),
+        var(--gold-light)
+    );
+
 
     color:
     #111;
 
+
     padding:
-    12px 25px;
+    14px 30px;
+
 
     text-decoration:
     none;
 
+
     border-radius:
     30px;
+
 
     font-weight:
     bold;
 
+
     margin:
     10px;
+
 
     display:
     inline-block;
 
+
+    box-shadow:
+    0 10px 20px rgba(196,155,61,.25);
+
+
     transition:
-    .3s;
+    var(--transition);
 
 }
+
 
 
 .cta-btn:hover {
 
-    background:
-    #f0d276;
 
     transform:
-    translateY(-3px);
+    translateY(-4px);
+
+
+    box-shadow:
+    0 18px 35px rgba(196,155,61,.45);
+
 
 }
 
 
 
-/* =========================
-   STATS
-========================= */
+/* =========================================================
+   CONTENT WIDTH CONTROL
+========================================================= */
+
+
+.resume-section > * {
+
+
+    max-width:
+    1000px;
+
+
+    margin-left:
+    auto;
+
+
+    margin-right:
+    auto;
+
+}
+
+
+
+/* =========================================================
+   STATS SECTION
+========================================================= */
 
 
 .stats-section {
 
+
     max-width:
     1200px;
 
+
     margin:
-    -40px auto 40px;
+    -50px auto 50px;
+
 
     display:
     grid;
 
+
     grid-template-columns:
     repeat(4,1fr);
 
+
     gap:
-    20px;
+    25px;
+
 
     padding:
     0 20px;
 
+
 }
+
 
 
 .stat-card {
 
 
     background:
-    #1d1d1d;
+    var(--surface);
+
 
     border:
-    1px solid #333;
+    1px solid var(--border);
+
 
     border-top:
-    4px solid #c49b3d;
+    4px solid var(--gold);
+
 
     padding:
-    25px;
+    30px;
+
 
     text-align:
     center;
 
+
     border-radius:
-    12px;
+    var(--radius);
+
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,.3);
+    var(--shadow);
+
+
+    transition:
+    var(--transition);
 
 }
+
+
+
+.stat-card:hover {
+
+
+    transform:
+    translateY(-8px);
+
+
+    border-color:
+    var(--gold);
+
+}
+
 
 
 .stat-card h2 {
 
+
     color:
-    #c49b3d;
+    var(--gold);
+
 
     font-size:
-    2rem;
+    2.2rem;
+
 
     border:
     none;
 
+
     margin:
     0;
 
 }
+
 
 
 .stat-card p {
 
+
     margin:
     0;
+
+
+    color:
+    var(--text-muted);
 
 }
 
 
 
-/* =========================
+/* =========================================================
    GENERAL SECTIONS
-========================= */
+========================================================= */
 
 
 .resume-section {
 
+
+    position:
+    relative;
+
+
     padding:
-    60px 10%;
+    80px 10%;
+
 
     background:
-    #181818;
+    var(--surface);
+
 
     border-top:
-    2px solid #c49b3d;
+    1px solid rgba(196,155,61,.4);
 
 }
 
 
-.resume-section:nth-child(even){
+
+.resume-section::before {
+
+
+    content:
+    "";
+
+
+    position:
+    absolute;
+
+
+    top:
+    0;
+
+
+    left:
+    10%;
+
+
+    width:
+    80%;
+
+
+    height:
+    1px;
+
 
     background:
-    #202020;
+
+    linear-gradient(
+        to right,
+        transparent,
+        #555,
+        transparent
+    );
+
+}
+
+
+
+.resume-section:nth-child(even) {
+
+
+    background:
+    var(--surface-alt);
 
 }
 
@@ -319,157 +677,556 @@ body {
 
 h2 {
 
+
     color:
-    #c49b3d;
+    var(--gold);
+
 
     text-transform:
     uppercase;
 
-    letter-spacing:
-    1px;
 
-    border-bottom:
-    1px solid #444;
+    letter-spacing:
+    1.5px;
+
+
+    font-size:
+    2.2rem;
+
+
+    margin-bottom:
+    35px;
+
+
+    position:
+    relative;
+
+
+    border:
+    none;
+
 
     padding-bottom:
+    18px;
+
+}
+
+
+
+h2::after {
+
+
+    content:
+    "";
+
+
+    position:
+    absolute;
+
+
+    left:
+    0;
+
+
+    bottom:
+    0;
+
+
+    width:
+    80px;
+
+
+    height:
+    4px;
+
+
+    background:
+    var(--gold);
+
+
+    border-radius:
     10px;
 
 }
 
 
+
 h3 {
 
+
     color:
-    #f0d276;
+    var(--gold-light);
 
 }
-
-
-
-p {
-
-    font-size:
-    1.05rem;
-
-}
-
+/* =========================================================
+   PART 2
+   CARDS • HEALTHCARE PLATFORM • TIMELINE
+   RECOMMENDATIONS • ACCORDION • FOOTER
+   RESPONSIVE DESIGN
+========================================================= */
 
 
 /* =========================
-   PORTFOLIO CARDS
+   PORTFOLIO GRID
 ========================= */
 
 
 .portfolio-grid {
 
-    display:
-    grid;
+    display:grid;
 
     grid-template-columns:
-    repeat(4,1fr);
+    repeat(4, 1fr);
 
     gap:
-    25px;
+    var(--space-lg);
 
 }
-
 
 
 .portfolio-card {
 
 
+    position:relative;
+
     background:
     linear-gradient(
         145deg,
-        #222,
-        #151515
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.02)
     );
 
-    padding:
-    25px;
+    border:
+    1px solid var(--border);
 
     border-radius:
-    12px;
+    var(--radius-lg);
 
-    border:
-    1px solid #333;
+    padding:
+    30px;
+
+    overflow:hidden;
 
     transition:
-    .3s;
+    var(--transition);
+
+}
+
+
+
+.portfolio-card::before {
+
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:
+    linear-gradient(
+        90deg,
+        var(--gold),
+        var(--gold-light)
+    );
 
 
 }
 
 
+
 .portfolio-card:hover {
 
+
     transform:
-    translateY(-8px);
+    translateY(-10px);
+
 
     border-color:
-    #c49b3d;
+    var(--gold);
+
+
+    box-shadow:
+    var(--shadow-gold);
+
+
+}
+
+
+
+.portfolio-card h3 {
+
+
+    margin-top:0;
+
+    font-size:
+    1.35rem;
+
+
+}
+
+
+
+.portfolio-card p {
+
+
+    color:
+    var(--text-muted);
+
 
 }
 
 
 
 /* =========================
-   TIMELINE
+   HEALTHCARE INNOVATION
+   PLATFORM SECTION
+========================= */
+
+
+#healthcare-platform {
+
+
+    background:
+    linear-gradient(
+        135deg,
+        #111827,
+        #151515
+    );
+
+
+}
+
+
+
+#healthcare-platform .platform-card {
+
+
+    background:
+    rgba(255,255,255,.05);
+
+
+    border:
+    1px solid var(--border);
+
+
+    border-radius:
+    var(--radius-xl);
+
+
+    padding:
+    35px;
+
+
+    backdrop-filter:
+    blur(12px);
+
+
+    transition:
+    var(--transition);
+
+
+
+}
+
+
+
+#healthcare-platform .platform-card:hover {
+
+
+    transform:
+    translateY(-8px);
+
+
+    border-color:
+    var(--gold);
+
+
+    box-shadow:
+    var(--shadow-gold);
+
+
+}
+
+
+
+
+#healthcare-platform ul {
+
+
+    padding-left:
+    20px;
+
+
+}
+
+
+
+#healthcare-platform li {
+
+
+    margin-bottom:
+    14px;
+
+
+    color:
+    var(--text-muted);
+
+
+}
+
+
+
+#healthcare-platform li::marker {
+
+
+    color:
+    var(--gold);
+
+
+}
+
+
+
+.platform-icon {
+
+
+    font-size:
+    4rem;
+
+
+    margin-bottom:
+    20px;
+
+
+}
+
+
+
+.live-demo-btn {
+
+
+    display:
+    inline-block;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--gold),
+        var(--gold-light)
+    );
+
+
+    color:
+    #111;
+
+
+    padding:
+    14px 35px;
+
+
+    border-radius:
+    50px;
+
+
+    font-weight:
+    700;
+
+
+    text-decoration:none;
+
+
+    transition:
+    var(--transition);
+
+
+}
+
+
+
+.live-demo-btn:hover {
+
+
+    transform:
+    translateY(-4px)
+    scale(1.03);
+
+
+    box-shadow:
+    var(--shadow-gold);
+
+
+}
+
+
+
+/* =========================
+   TIMELINE UPGRADE
 ========================= */
 
 
 .timeline {
 
-    padding:
-    0;
 
-}
+    position:relative;
 
 
-.timeline li {
-
-
-    list-style:
-    none;
-
-    background:
-    #202020;
-
-    padding:
-    30px;
-
-    margin-bottom:
-    25px;
-
-    border-left:
-    5px solid #c49b3d;
-
-    border-radius:
-    8px;
-
-    box-shadow:
-    0 5px 20px rgba(0,0,0,.25);
+    padding-left:
+    20px;
 
 
 }
 
 
-.timeline ul li {
 
-    background:
-    transparent;
+.timeline::before {
 
-    box-shadow:
-    none;
 
-    border:
-    none;
+    content:"";
 
-    padding:
+
+    position:absolute;
+
+
+    left:
     5px;
 
-    margin:
+
+    top:0;
+
+
+    bottom:0;
+
+
+    width:
+    3px;
+
+
+    background:
+    linear-gradient(
+        var(--gold),
+        transparent
+    );
+
+
+}
+
+
+
+.timeline > li {
+
+
+    position:relative;
+
+
+    list-style:none;
+
+
+    background:
+    var(--card-bg);
+
+
+    border:
+    1px solid var(--border);
+
+
+    border-left:
+    5px solid var(--gold);
+
+
+    padding:
+    35px;
+
+
+    margin-bottom:
+    35px;
+
+
+    border-radius:
+    var(--radius-lg);
+
+
+    box-shadow:
+    var(--shadow);
+
+
+    transition:
+    var(--transition);
+
+
+}
+
+
+
+.timeline > li::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:
+    -17px;
+
+
+    top:
+    35px;
+
+
+    width:
+    18px;
+
+
+    height:
+    18px;
+
+
+    border-radius:
+    50%;
+
+
+    background:
+    var(--gold);
+
+
+    border:
+    4px solid #101010;
+
+
+}
+
+
+
+.timeline > li:hover {
+
+
+    transform:
+    translateX(8px);
+
+
+    border-color:
+    var(--gold);
+
+
+}
+
+
+
+.timeline h3 {
+
+
+    margin-top:
     0;
+
 
 }
 
@@ -483,14 +1240,15 @@ p {
 .recommendation-grid {
 
 
-    display:
-    grid;
+    display:grid;
+
 
     grid-template-columns:
     repeat(3,1fr);
 
+
     gap:
-    25px;
+    var(--space-lg);
 
 
 }
@@ -501,43 +1259,103 @@ p {
 
 
     background:
-    #202020;
+    linear-gradient(
+        145deg,
+        #222,
+        #141414
+    );
 
-    padding:
-    25px;
-
-    border-radius:
-    12px;
 
     border:
-    1px solid #333;
+    1px solid var(--border);
+
+
+    border-radius:
+    var(--radius-lg);
+
+
+    padding:
+    30px;
+
+
+    transition:
+    var(--transition);
+
+
+}
+
+
+
+.recommendation-card:hover {
+
+
+    transform:
+    translateY(-8px);
+
+
+    border-color:
+    var(--gold);
+
+
+    box-shadow:
+    var(--shadow-gold);
+
+
+}
+
+
+
+.recommendation-card h3 {
+
+
+    color:
+    var(--gold-light);
+
+
+}
+
+
+
+.recommendation-card h4 {
+
+
+    color:
+    var(--text-muted);
+
 
 }
 
 
 
 /* =========================
-   ACCORDIONS
+   ACCORDION REDESIGN
 ========================= */
 
 
 .accordion-item {
 
 
-    margin-bottom:
-    20px;
+    background:
+    var(--card-bg);
+
 
     border:
-    1px solid #333;
+    1px solid var(--border);
+
 
     border-radius:
-    8px;
+    var(--radius-md);
 
-    overflow:
-    hidden;
+
+    overflow:hidden;
+
+
+    margin-bottom:
+    18px;
 
 
 }
+
 
 
 .accordion-header {
@@ -546,26 +1364,49 @@ p {
     width:
     100%;
 
-    background:
-    #292929;
-
-    color:
-    #c49b3d;
 
     padding:
-    18px;
+    22px;
 
-    border:
-    none;
 
-    cursor:
-    pointer;
+    background:
+    transparent;
+
+
+    color:
+    var(--gold);
+
+
+    border:none;
+
+
+    text-align:left;
+
+
+    cursor:pointer;
+
 
     font-size:
-    1.1rem;
+    1.15rem;
 
-    text-align:
-    left;
+
+    font-weight:
+    700;
+
+
+    transition:
+    var(--transition);
+
+
+}
+
+
+
+.accordion-header:hover {
+
+
+    background:
+    rgba(196,155,61,.12);
 
 
 }
@@ -575,23 +1416,59 @@ p {
 .accordion-body {
 
 
-    display:
-    none;
-
     padding:
-    20px;
+    25px;
+
 
     background:
-    #222;
+    rgba(0,0,0,.15);
+
+
+    color:
+    var(--text-muted);
+
+
+    animation:
+    fadeIn .4s ease;
 
 
 }
 
 
-.accordion-item.active .accordion-body {
 
-    display:
-    block;
+.accordion-item.active {
+
+
+    border-color:
+    var(--gold);
+
+
+}
+
+
+
+@keyframes fadeIn {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+        translateY(-5px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
 
 }
 
@@ -606,16 +1483,37 @@ footer {
 
 
     background:
-    #080808;
+    #050505;
 
-    text-align:
-    center;
+
+    border-top:
+    1px solid var(--border);
+
+
+    text-align:center;
+
 
     padding:
-    30px;
+    50px 20px;
+
 
     color:
-    #aaa;
+    var(--text-muted);
+
+
+}
+
+
+
+footer strong {
+
+
+    color:
+    var(--gold);
+
+
+    font-size:
+    1.4rem;
 
 
 }
@@ -623,8 +1521,92 @@ footer {
 
 
 /* =========================
-   MOBILE RESPONSIVE
+   CUSTOM SCROLLBAR
 ========================= */
+
+
+::-webkit-scrollbar {
+
+
+    width:
+    12px;
+
+
+}
+
+
+
+::-webkit-scrollbar-track {
+
+
+    background:
+    #111;
+
+
+}
+
+
+
+::-webkit-scrollbar-thumb {
+
+
+    background:
+    linear-gradient(
+        var(--gold),
+        var(--gold-light)
+    );
+
+
+    border-radius:
+    20px;
+
+
+}
+
+
+
+::-webkit-scrollbar-thumb:hover {
+
+
+    background:
+    var(--gold-light);
+
+
+}
+
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+
+@media(max-width:1100px){
+
+
+.portfolio-grid {
+
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+
+}
+
+
+
+.hero-content {
+
+
+    gap:
+    30px;
+
+
+}
+
+
+}
+
 
 
 @media(max-width:900px){
@@ -632,43 +1614,60 @@ footer {
 
 .hero-content {
 
+
     flex-direction:
     column;
 
-    text-align:
-    center;
+
+    text-align:center;
+
 
 }
+
 
 
 .stats-section {
 
 
-grid-template-columns:
-repeat(2,1fr);
+    grid-template-columns:
+    repeat(2,1fr);
 
 
 }
 
-
-.portfolio-grid {
-
-
-grid-template-columns:
-repeat(2,1fr);
-
-
-}
 
 
 .recommendation-grid {
 
 
-grid-template-columns:
-1fr;
+    grid-template-columns:
+    1fr;
 
 
 }
+
+
+
+.resume-section {
+
+
+    padding:
+    50px 6%;
+
+
+}
+
+
+
+.timeline > li {
+
+
+    padding:
+    25px;
+
+
+}
+
 
 
 }
@@ -678,40 +1677,147 @@ grid-template-columns:
 @media(max-width:600px){
 
 
-.hero-text h1 {
+.hero-section {
 
-font-size:
-2.2rem;
+
+    padding:
+    60px 15px;
+
 
 }
+
+
+
+.profile-image img {
+
+
+    width:
+    170px;
+
+
+    height:
+    170px;
+
+
+}
+
+
+
+.hero-text h1 {
+
+
+    font-size:
+    2.1rem;
+
+
+}
+
+
+
+.hero-text h2 {
+
+
+    font-size:
+    1.2rem;
+
+
+}
+
 
 
 .stats-section {
 
 
-grid-template-columns:
-1fr;
+    grid-template-columns:
+    1fr;
+
+
+    margin-top:
+    20px;
 
 
 }
+
 
 
 .portfolio-grid {
 
 
-grid-template-columns:
-1fr;
+    grid-template-columns:
+    1fr;
 
 
 }
+
+
+
+.cta-btn {
+
+
+    width:
+    90%;
+
+
+    text-align:center;
+
+
+}
+
 
 
 .resume-section {
 
-padding:
-40px 5%;
+
+    padding:
+    35px 5%;
+
 
 }
+
+
+
+.timeline {
+
+
+    padding-left:
+    10px;
+
+
+}
+
+
+
+.timeline > li:hover {
+
+
+    transform:none;
+
+
+}
+
+
+
+}
+
+
+
+@media(prefers-reduced-motion:reduce){
+
+
+* {
+
+
+    animation:none!important;
+
+
+    transition:none!important;
+
+
+    scroll-behavior:auto!important;
+
+
+}
+
 
 
 }
